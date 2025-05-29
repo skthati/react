@@ -11,13 +11,7 @@
 <hr>
 <ol>
     <li><a href="#react-basics">React Basics</a></li>
-    <li><a href="#length-of-sentence">Length of Sentence</a></li>
-    <li><a href="#count-characters-while-typing">Count no of Characters while type</a></li>
-    <li><a href="d_age-to-h_age-calc">Dog age to Human age Calculator</a></li>
-    <li><a href="bmi-calculator">BMI Calculator</a></li>
-    <li><a href="random-number-generator">Generate Random Number</a></li>
-    <li><a href="leap-year">Leap Year</a></li>
-    <li><a href="roll-dice">Roll Dice</a></li>
+    <li><a href="#counter">Counter</a><li>
 
 </ol>
 <hr>
@@ -33,4 +27,40 @@ console.log("Hello World!")
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <hr>  
 
+# Counter <a name="counter"></a>
+
+"+" button to increase the counter
+"-" button to decrease the counter
+
+![Alt text](my_counter/public/counter.gif)
+
+```React
+import React, { useState } from 'react'
+
+function MyCounter() {
+    const [countValue, setCountValue] = useState(0)
+
+    function increaseCount() {
+        return setCountValue(countValue+1)
+    }
+    
+    function decreaseCount() {
+        return setCountValue(countValue-1)
+    }
+
+    return ( 
+        <div>
+            
+            <h1>{ countValue }</h1>
+            <button onClick={ increaseCount }>+</button>
+            <button onClick={ decreaseCount }>-</button>
+        </div>
+    )
+}
+
+export default MyCounter
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
 
