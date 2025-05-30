@@ -193,27 +193,31 @@ export default MyCounter
 
 - Below code to `App.js`
 
-```React
-    <div className='App'>
-      <Router>
-        <nav>
-          <Link className="nav-link" to="/">Home</Link>
-          <Link to="/click-count">Click Count</Link>
-          <Link to="/nz-holiday-list">NZ Holidays List</Link>
-          <Link to="/fruit-list">Fruits List</Link>
-          <Link to="/country-list">Countries List</Link>
-        </nav>
+    ```React
+        <div className='App'>
+        <Router>
+            <nav>
+            <Link className="nav-link" to="/">Home</Link>
+            <Link to="/click-count">Click Count</Link>
+            <Link to="/nz-holiday-list">NZ Holidays List</Link>
+            <Link to="/fruit-list">Fruits List</Link>
+            <Link to="/country-list">Countries List</Link>
+            </nav>
 
-        <Routes>
-          <Route path='/' element={<MyName />} />
-          <Route path='/click-count' element= {<ClickCount />} />
-          <Route path='/nz-holiday-list' element= {<NZHolidaysList />} />
-          <Route path='/fruit-list' element= {<FruitsList />} />
-          <Route path='/country-list' element= {<CountriesList />} />
-        </Routes>
-      </Router>
-    </div>
-```
+            <Routes>
+            <Route path='/' element={<MyName />} />
+            <Route path='/click-count' element= {<ClickCount />} />
+            <Route path='/nz-holiday-list' element= {<NZHolidaysList />} />
+            <Route path='/fruit-list' element= {<FruitsList />} />
+            <Route path='/country-list' element= {<CountriesList />} />
+            </Routes>
+        </Router>
+        </div>
+    ```
+
+- navBar as a separate component and can be added to `App.js` as `<NavBar />`. Check `navBar.js` file in `components` folder.
+
+
 
 # Naming Convention
 

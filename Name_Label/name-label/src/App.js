@@ -5,14 +5,18 @@ import ClickCount from './components/clickCount.js';
 import NZHolidaysList from './components/NZHolidaysList.js';
 import FruitsList from './components/fruitsList.js';
 import CountriesList from './components/countriesList.js';
-import Navbar from './components/navBar.js';
+// import Navbar from './components/navBar.js';
+import SideBar from './components/sideBar.js';
+import YearSelector from './components/yearSelector.js';
+import FullnameTextbox from './components/fullNameTextBox.js';
 
 
 function App() {
   return (
     <div className='App'>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
+        <SideBar />
         {/* <nav>
           <Link className="nav-link" to="/">Home</Link>
           <Link to="/click-count">Click Count</Link>
@@ -27,6 +31,8 @@ function App() {
           <Route path='/nz-holiday-list' element= {<NZHolidaysList />} />
           <Route path='/fruit-list' element= {<FruitsList />} />
           <Route path='/country-list' element= {<CountriesList />} />
+          <Route path='/year-selector' element= {<YearSelector />} />
+          <Route path='/fullname-textbox' element= {<FullnameTextbox />} />
         </Routes>
       </Router>
     </div>
