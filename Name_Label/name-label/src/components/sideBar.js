@@ -29,6 +29,9 @@ function SideBar() {
         <li className="nav-item mb-2">
           <Link className="nav-link" to="/track-numbers">Track Numbers</Link>
         </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/field-components">Form Fields</Link>
+        </li>
       </ul>
     </div>
   );

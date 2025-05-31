@@ -11,7 +11,7 @@ function TrackNumbers() {
 
     function handleDecrease() {
         const intInput = parseInt(number, 10)
-        return setNumber(number-1)
+        return setNumber(intInput-1)
     }
 
     function handleClear() {

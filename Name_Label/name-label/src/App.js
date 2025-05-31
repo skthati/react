@@ -10,6 +10,7 @@ import SideBar from './components/sideBar.js';
 import YearSelector from './components/yearSelector.js';
 import FullnameTextbox from './components/fullNameTextBox.js';
 import TrackNumbers from './components/trackNumbers.js';
+import FieldComponents from './components/fieldComponents.js';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/year-selector' element= {<YearSelector />} />
           <Route path='/fullname-textbox' element= {<FullnameTextbox />} />
           <Route path='/track-numbers' element= {<TrackNumbers />} />
+          <Route path='/field-components' element = {<FieldComponents />} />
         </Routes>
       </Router>
     </div>
