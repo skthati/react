@@ -26,6 +26,9 @@ function SideBar() {
         <li className="nav-item mb-2">
           <Link className="nav-link" to="/fullname-textbox">Fullname Textbox</Link>
         </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/track-numbers">Track Numbers</Link>
+        </li>
       </ul>
     </div>
   );
