@@ -11,6 +11,9 @@ import YearSelector from './components/yearSelector.js';
 import FullnameTextbox from './components/fullNameTextBox.js';
 import TrackNumbers from './components/trackNumbers.js';
 import FieldComponents from './components/fieldComponents.js';
+import DiscountCalculator from './components/discountCalculator.js';
+import DogFacts from './components/dogFacts.js';
+import ChefApp from './components/chef/chefApp.js';
 
 
 function App() {
@@ -31,12 +34,15 @@ function App() {
           <Route path='/' element={<MyName />} />
           <Route path='/click-count' element= {<ClickCount />} />
           <Route path='/nz-holiday-list' element= {<NZHolidaysList />} />
+          <Route path='/dog-facts' element={ <DogFacts />} />
           <Route path='/fruit-list' element= {<FruitsList />} />
           <Route path='/country-list' element= {<CountriesList />} />
           <Route path='/year-selector' element= {<YearSelector />} />
           <Route path='/fullname-textbox' element= {<FullnameTextbox />} />
           <Route path='/track-numbers' element= {<TrackNumbers />} />
           <Route path='/field-components' element = {<FieldComponents />} />
+          <Route path='/discount-calculator' element = {<DiscountCalculator />} />
+          <Route path='/chef-app' element = {<ChefApp />} />
         </Routes>
       </Router>
     </div>

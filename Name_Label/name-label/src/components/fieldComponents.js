@@ -9,7 +9,7 @@ function FieldComponents () {
     const [newCountry, setNewCountry] = useState()
     const [countriesLst, setCountriesLst] = useState([])
     const [gender, setGender] = useState("")
-    const [agree, setAgree] = useState("")
+    const [agree, setAgree] = useState(false)
 
     let nextCountry = 0
 
@@ -122,7 +122,7 @@ function FieldComponents () {
                 type="checkbox"
                 name="agree"
                 checked={agree}
-                onChange={(e) => setAgree(e.target.value)}
+                onChange={(e) => setAgree(e.target.checked)}
             />I Agree to terms.
             <p>Agreed: { agree? 'Yes' : 'No'}</p>
 

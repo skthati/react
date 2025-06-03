@@ -15,6 +15,9 @@ function SideBar() {
           <Link className="nav-link" to="/nz-holiday-list">NZ Holidays List</Link>
         </li>
         <li className="nav-item mb-2">
+          <Link className="nav-link" to="/dog-facts">Dog Facts</Link>
+        </li>
+        <li className="nav-item mb-2">
           <Link className="nav-link" to="/fruit-list">Fruits List</Link>
         </li>
         <li className="nav-item mb-2">
@@ -31,6 +34,12 @@ function SideBar() {
         </li>
         <li className="nav-item mb-2">
           <Link className="nav-link" to="/field-components">Form Fields</Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/discount-calculator">Discount calculator</Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/components/chef/chef-app">Chef App</Link>
         </li>
       </ul>
     </div>
