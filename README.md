@@ -217,7 +217,12 @@ export default MyCounter
 
 - navBar as a separate component and can be added to `App.js` as `<NavBar />`. Check `navBar.js` file in `components` folder.
 
-
+# Words
+- destructure
+- side effects
+- fetch
+- method
+- 
 
 # Naming Convention
 
@@ -501,9 +506,41 @@ export default function Joke(props) {
     )
 }
 ```
+## functions
+- add new item to array
 
+        const addIngredient = () => setIngredients([...ingredients, "Pepper"])
 
+- filter item from array
+    
+        const removeIngredient = () => setIngredients(ingredients.filter((e) => e !== "Pepper"))
 
+- Update item in array
+
+        const updateIngredient = () => setIngredients(ingredients.map((e) => (e === "Pepper" ? "Pepper Corn" : e)))
+
+        <!-- Another way to update array -->
+        const handleClick = () => {
+            const copyMovie = {
+                ...movie,
+                rating: 5
+            }
+        }
+
+        <!-- Another way -->
+        setMovie({... movie, ratings: 5 });
+            
+
+### useState declaration
+    ```
+    
+    const [movie, setMovie] = useState({
+        title: "Equalizer 3",
+        ratings: 7,
+    })
+    ```
+
+### 
 
 ## Ternary Operator
 condition ? exprIfTrue : exprIfFalse
@@ -720,7 +757,111 @@ export default function Count(props) {
 ```
 
 
+### Passing data to components
 
+```React
+<!-- App.js -->
+import React from "react"
+import padsData from "./pads"
+import Pad from "./Pad"
+
+export default function App() {
+    const [pads, setPads] = React.useState(padsData)
+
+    const buttonElements = pads.map(pad => (
+        <Pad key={pad.id} color={pad.color} />
+    ))
+    
+    return (
+        <main>
+            <div className="pad-container">
+                {buttonElements}
+            </div>
+        </main>
+    )
+}
+
+<!-- pads.js -->
+export default function Pad(props) {
+    
+    return (
+        <button style={{backgroundColor: props.color}}></button>
+    )
+}
+
+Pads Data
+Name_Label/name-label/src/components/chef/pads.js
+
+```
+
+### To call a function in parent component
+props.toggle is in app.js and button is in pads.js
+```React
+        <button 
+            style={{backgroundColor: props.color}}
+            className={on ? "on" : undefined}
+            onClick={() => props.toggle(id)}
+        ></button>
+
+        function toggle(id) {
+        setPads(prevPads => prevPads.map(item => {
+            return item.id === id ? {...item, on: !item.on} : item
+        }))
+    }
+```
+- Two main parts to pass a function in a component from parent to child and when child has to pass that function to parent to execute.
+
+```React
+<!-- In child component -->
+    <button onClick={props.toggleRecipeShown}>Get a recipe</button>
+
+<!-- In Parent component -->
+
+    const [recipeShown, setRecipeShown] = React.useState(false)
+    function toggleRecipeShown() {
+        setRecipeShown(prevShown => !prevShown)
+    }
+
+    <!-- above function is passed in component to child component -->
+    <IngredientsList
+        ingredients={ingredients}
+        toggleRecipeShown={toggleRecipeShown}
+    />
+```
+
+# VS Code shortcuts
+
+- toggle explorer
+    `cmd +b`
+- Open file quickly
+    `cmd + p`
+-
+
+## Essential
+
+| Action                               | Windows / Linux       | macOS                    |
+| ------------------------------------ | --------------------- | ------------------------ |
+| **Auto-complete suggestions**        | `Ctrl + Space`        | `Cmd + Space`            |
+| **Format document**                  | `Shift + Alt + F`     | `Shift + Option + F`     |
+| **Comment/uncomment line**           | `Ctrl + /`            | `Cmd + /`                |
+| **Move line up/down**                | `Alt + ↑ / ↓`         | `Option + ↑ / ↓`         |
+| **Copy line up/down**                | `Shift + Alt + ↑ / ↓` | `Shift + Option + ↑ / ↓` |
+| **Delete line**                      | `Ctrl + Shift + K`    | `Cmd + Shift + K`        |
+| **Multi-cursor select (next match)** | `Ctrl + D`            | `Cmd + D`                |
+| **Select all occurrences of word**   | `Ctrl + Shift + L`    | `Cmd + Shift + L`        |
+
+## 🧠 Navigation & Search
+
+| Action                        | Windows / Linux    | macOS             |
+| ----------------------------- | ------------------ | ----------------- |
+| **Quick file navigation**     | `Ctrl + P`         | `Cmd + P`         |
+| **Go to line**                | `Ctrl + G`         | `Cmd + G`         |
+| **Go to symbol in file**      | `Ctrl + Shift + O` | `Cmd + Shift + O` |
+| **Go to definition**          | `F12`              | `F12`             |
+| **Peek definition**           | `Alt + F12`        | `Option + F12`    |
+| **Find in file**              | `Ctrl + F`         | `Cmd + F`         |
+| **Replace in file**           | `Ctrl + H`         | `Cmd + H`         |
+| **Global search (all files)** | `Ctrl + Shift + F` | `Cmd + Shift + F` |
 
 
 # Javascript
@@ -728,6 +869,7 @@ export default function Count(props) {
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
 
 # React Course
 
