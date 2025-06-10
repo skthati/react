@@ -829,39 +829,7 @@ props.toggle is in app.js and button is in pads.js
     />
 ```
 
-# VS Code shortcuts
 
-- toggle explorer
-    `cmd +b`
-- Open file quickly
-    `cmd + p`
--
-
-## Essential
-
-| Action                               | Windows / Linux       | macOS                    |
-| ------------------------------------ | --------------------- | ------------------------ |
-| **Auto-complete suggestions**        | `Ctrl + Space`        | `Cmd + Space`            |
-| **Format document**                  | `Shift + Alt + F`     | `Shift + Option + F`     |
-| **Comment/uncomment line**           | `Ctrl + /`            | `Cmd + /`                |
-| **Move line up/down**                | `Alt + ↑ / ↓`         | `Option + ↑ / ↓`         |
-| **Copy line up/down**                | `Shift + Alt + ↑ / ↓` | `Shift + Option + ↑ / ↓` |
-| **Delete line**                      | `Ctrl + Shift + K`    | `Cmd + Shift + K`        |
-| **Multi-cursor select (next match)** | `Ctrl + D`            | `Cmd + D`                |
-| **Select all occurrences of word**   | `Ctrl + Shift + L`    | `Cmd + Shift + L`        |
-
-## 🧠 Navigation & Search
-
-| Action                        | Windows / Linux    | macOS             |
-| ----------------------------- | ------------------ | ----------------- |
-| **Quick file navigation**     | `Ctrl + P`         | `Cmd + P`         |
-| **Go to line**                | `Ctrl + G`         | `Cmd + G`         |
-| **Go to symbol in file**      | `Ctrl + Shift + O` | `Cmd + Shift + O` |
-| **Go to definition**          | `F12`              | `F12`             |
-| **Peek definition**           | `Alt + F12`        | `Option + F12`    |
-| **Find in file**              | `Ctrl + F`         | `Cmd + F`         |
-| **Replace in file**           | `Ctrl + H`         | `Cmd + H`         |
-| **Global search (all files)** | `Ctrl + Shift + F` | `Cmd + Shift + F` |
 
 
 # Javascript

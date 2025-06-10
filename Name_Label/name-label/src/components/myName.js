@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { createContext } from "react";
+// import { createContext } from "react";
 
-const nameContext = createContext();
+// const nameContext = createContext();
 
 function MyName(){
     const [myFName, setMyFName] = useState("Sandeep")

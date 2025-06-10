@@ -13,10 +13,9 @@ function DiscountCalculator(){
     const [discountName, setDiscountName] = useState("")
     const [discountPercent, setDiscountPercent] = useState("")
     const [selectedDiscount, setSelectedDiscount] = useState("")
-    // const [discountAmount, setDiscountAmount] = useState(0)
-    // const [currentPercent, setCurrentPercent] = useState(0)
     const [weight, setWeight] = useState(0)
-    // const [cost, setCost] = useState(0)
+    const [cost, setCost] = useState(0)
+    const [finalAmount, setFinalAmount] = useState("")
     const SNo = useRef(1)
 
     function handleDiscountTypeSubmit(){
@@ -35,12 +34,20 @@ function DiscountCalculator(){
         return setDiscounts
     }
 
-    // function calculateTotalDiscount(){
-    //     discounts.map((e) => (
-    //         if e.name === selectedDiscount( e.percent = currentPercent)
-    //     ))
-    //     discountAmount = ()
-    // }
+    function calculateTotalDiscount(){
+        
+        const thisCost = parseFloat(cost) // 100
+        console.log(`Cost: ${thisCost}`)
+        const thisPercent = discounts.find((e) => e.name === selectedDiscount) //10
+        console.log(`Percent: ${thisPercent.name} and value ${thisPercent.percent}`)
+        const thisDiscount = ((thisCost * parseFloat(thisPercent.percent)) /100 ) // 10
+        console.log(`Discount: ${thisDiscount}`)
+        const totalDiscountAmount = thisDiscount * weight
+        console.log(`discount * weight: ${totalDiscountAmount}`)
+        setFinalAmount(totalDiscountAmount)
+        return finalAmount
+            
+    }
 
 
     return (
@@ -80,9 +87,9 @@ function DiscountCalculator(){
                     value={selectedDiscount}
                     onChange={(e) => setSelectedDiscount(e.target.value)}
                 >
-                    <option value="">--SELECT--</option>
+                    <option value="" key="San">--SELECT--</option>
                     {discounts.map((c) => (
-                        <option key={c.SNo} name={c.name}>{c.name}</option>
+                        <option key={c.id} name={c.name}>{c.name}</option>
                     ))}
                 </select>
                 <p>You selected: <strong>{selectedDiscount}</strong></p>
@@ -97,7 +104,7 @@ function DiscountCalculator(){
                 />
                 <p>You set weight: <strong>{weight}</strong></p>
             </div>
-            {/* <div>
+            <div>
                 <label>Enter total cost: </label>
                 <input
                     type="number"
@@ -107,9 +114,11 @@ function DiscountCalculator(){
                 />
                 <p>Total cost: <strong>{cost}</strong></p>
             </div>
-            <button onSelect={calculateTotalDiscount}>Calculate discount</button>
-            <hr></hr> */}
+            <button onClick={calculateTotalDiscount}>Calculate discount</button>
+            <hr></hr>
 
+            <p>Final Discount Amount: <strong>{finalAmount}</strong></p>
+            
 
 
 
