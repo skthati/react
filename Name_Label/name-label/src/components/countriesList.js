@@ -8,7 +8,7 @@ function CountriesList(){
 
     useEffect(() => {
         axios.get('https://date.nager.at/api/v3/AvailableCountries')
-        .then(response => setCountries(response.data))
+        .then(response = setCountries(response.data))
         .catch(err => console.error("Unable to fetch data", err));
     }, [])
 

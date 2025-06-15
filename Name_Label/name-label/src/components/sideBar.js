@@ -41,6 +41,12 @@ function SideBar() {
         <li className="nav-item mb-2">
           <Link className="nav-link" to="/components/chef/chef-app">Chef App</Link>
         </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/list-of-countries">List of Countries</Link>
+        </li>
+        <li className="nav-item mb-2">
+          <Link className="nav-link" to="/list-of-holidays">list Of Holidays</Link>
+        </li>
       </ul>
     </div>
   );

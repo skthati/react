@@ -14,6 +14,8 @@ import FieldComponents from './components/fieldComponents.js';
 import DiscountCalculator from './components/discountCalculator.js';
 import DogFacts from './components/dogFacts.js';
 import ChefApp from './components/chef/chefApp.js';
+import ListOfCountries from './components/listOfCountries.js';
+import ListOfHolidays from './components/listOfHolidays.js';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
           <Route path='/fullname-textbox' element= {<FullnameTextbox />} />
           <Route path='/track-numbers' element= {<TrackNumbers />} />
           <Route path='/field-components' element = {<FieldComponents />} />
+          <Route path='/list-of-countries' element= { <ListOfCountries />} />
+          <Route path='/list-of-holidays/:countryCode' element = { <ListOfHolidays />} />
           <Route path='/discount-calculator' element = {<DiscountCalculator />} />
           <Route path='/chef-app' element = {<ChefApp />} />
         </Routes>
